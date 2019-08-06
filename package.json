@@ -1,0 +1,32 @@
+{
+  "name": "react-cli",
+  "version": "1.0.0",
+  "description": "Generate the react project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zweekend01/react-cli.git"
+  },
+  "keywords": [
+    "react",
+    "cli"
+  ],
+  "author": "zweekend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zweekend01/react-cli/issues"
+  },
+  "homepage": "https://github.com/zweekend01/react-cli#readme",
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^2.20.0",
+    "react": "^16.8.6",
+    "rimraf": "^2.6.3"
+  },
+  "bin": {
+    "re": "bin/re"
+  }
+}

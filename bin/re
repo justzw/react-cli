@@ -1,0 +1,31 @@
+#!/usr/bin/env node --harmony
+'use strict';
+
+process.env.NODE_PATH = __dirname + '/../node_modules';
+
+const program = require('commander');
+
+program.usage('<command>');
+
+program.version('version: ' + require('../package').version);
+
+program
+  .command('new')
+  .description('Create a new project')
+  .action((args) => {
+    require('../command/new')(args);
+  });
+
+program
+  .command('generate')
+  .description('Generate a new component')
+  .alias('g')
+  .action(() => {
+    require('../command/generate')();
+  });
+
+program.parse(process.argv);
+
+if (!program.args.length) {
+  program.help();
+}
